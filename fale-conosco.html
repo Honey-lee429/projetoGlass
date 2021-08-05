@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="_css/estilo.css">
+        <link rel="stylesheet" href="_css/form.css">
+        <title>Fale Conosco</title>
+    </head>
+    <body>
+        <div class="interface">
+            <header id="cabecalho">
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+
+                <img src="_imagens/glass-logo-peq.jpg" alt="">
+                <img id="oculos" src="_imagens/contato.png" alt="Imagem Glass">
+
+                <nav class="menu">
+                    <ul>
+                        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul> 
+                </nav>
+                
+            </header>
+
+            <main>
+                
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h3>por Gustavo Guanabara</h3>
+                <h4>Atualizado em 01/Maio/2013</h4>
+    
+                <form method="POST" id="fContato" action="mailto:hanely.menezes@gmail.com" oninput="calc_total();">
+                    <!-- oninput/onkeyup chama a função javascript -->
+                    <fieldset id="usuario">
+                        <legend>Identificação do Usuário</legend> 
+
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" size="20" maxlength="3" placeholder="Nome completo">
+
+                        <label for="senha">Senha</label> 
+                        <input type="password" id="senha" size="8" maxlength="8">
+
+                        <label for="email">e-mail</label>
+                        <input type="email" id="email">
+
+                        <fieldset class="genero">
+                            <legend>Gênero</legend>
+                            <label class="sexo" for="masc"><input name="gen" type="radio" id="masc">Masculino</label>
+                            <label class="sexo" for="fem"><input name="gen" type="radio" id="fem">Feminino</label>
+                        </fieldset>
+
+                        <label for="bday">Data de Nascimento</label>
+                        <input type="date" id="bday">
+
+                    </fieldset>
+                    
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <label for="endereco">Logradouro:</label>  
+                        <input type="text" id="endereco">
+
+                        <label for="numero">Número:</label>
+                        <input type="number" id="numero">
+                        
+                        <div class="bloco">
+                            <label for="estado">Estado:</label>
+                            <select name="estados" id="estado">
+                                <optgroup class="opcao" label="Região Sudeste">
+                                    <option selected value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="BA">Vitória</option>
+                                </optgroup>
+                                <option value="AM">Amazonas</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="BA">Bahia</option>
+                                <option value="GO">Goiás</option>
+                            </select>
+                        </div>
+
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" maxlength="40" size="20" placeholder="Sua cidade" list="cidades">
+                        <datalist id="cidades">
+                            <option>São Paulo</option>
+                            <option>Guarulhos</option>
+                            <option>Osasco</option>
+                            <option>Piracicaba</option>
+                            <option>Mirassol</option>
+                            </datalist>
+                    </fieldset>
+                    
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+
+                        <p><label class="msg" for="urgencia">Grau de Urgência:</label>
+                        <input type="range" name="urg" id="urgencia" min="0" max="10" step="1">Max</p>
+
+                        <label for="msg">Mensagem:</label>
+                        <textarea id="msg" cols="30" rows="10"></textarea>
+                    </fieldset> 
+                    
+                    <fieldset id="pedido">
+                        <legend>Quero um Google Glass</legend>
+                        <input type="checkbox" id="pedido" checked><label for="pedido">Gostaria de adquirir um Google Glass quando disponível</label>
+                         
+                        <label for="cor">Cor:</label>
+                        <input type="color" id="cor" value="#5DBECF">
+                        
+                        <label for="quantidade">Quantidade:</label>  
+                        <input type="number" id="quantidade" min="0" max="5" value="0">
+
+                        <label for="preco">Preço Total: R$</label>
+                         <input type="text" id="preco" name="total" placeholder="Total a pagar" readonly>  
+                         <!-- readonly = somente leitura  -->
+                    </fieldset>
+
+                    <input type="image" src="_imagens/botao-enviar.png" alt="botão">
+
+                </form>
+    
+            </main>
+
+            <footer id="rodape">
+                <p class="info"> Copyright 2013 - by Gustavo Guanabara</p>
+                <a class="info" href="https://www.cursoemvideo.com/cursos/">Curso em vídeo</a>
+            </footer>
+        </div>
+    </body>
+    <script src="_javascript/funcoes.js"></script>
+</html>
+

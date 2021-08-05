@@ -1,0 +1,86 @@
+@charset "UTF-8 ";
+
+form {
+    width: 500px;
+    margin: auto;
+}
+
+fieldset {
+    border-color: #cecece;
+    padding: 20px;
+    margin: 20px;
+}
+
+fieldset#usuario {
+    background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco {
+    background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#mensagem {
+    background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+
+fieldset#pedido {
+    background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}
+
+fieldset.genero {
+    display: flex;
+    width: 50%;
+    margin: 10px 0px;
+}
+
+fieldset.genero .sexo {
+    display: contents;
+    margin-right: 15px;
+}
+
+.sexo input {
+    margin-right: 5px;
+    margin-bottom: 0;
+  
+}
+
+input, textarea {
+    display: block;
+    margin: 10px 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .6);
+    
+}
+
+input:hover, textarea:hover {
+    background-color: #f5f79b;
+}
+
+legend {
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bloco {
+    display: table-caption;
+}
+
+#estado {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#mensagem .msg  {
+    display: flex;
+}
+
+input #pedido {
+    background-color: aquamarine;
+}
+
+
